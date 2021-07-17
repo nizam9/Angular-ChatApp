@@ -1,0 +1,43 @@
+.background {
+    background-image: url("../../../assets/background.jpg");
+    /* Full height */
+    height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    height: 260px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    padding: 20px;
+}
+
+.login__btn button {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.login__btn p {
+    font-size: 14px;
+    color: var(--blue);
+    text-decoration: underline;
+    cursor: pointer;
+    float: right;
+    margin-top: 3px;
+    padding-left: 15px;
+}
+
+form {
+    padding: 12px;
+}

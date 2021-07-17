@@ -1,0 +1,152 @@
+.profile__pic__section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile__pic__section img {
+    height: 40px;
+}
+
+.profile {
+    margin: 10px;
+}
+
+.profile span {
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    /* color: var(--blue); */
+}
+
+.icons {
+    position: relative;
+    top: 20px;
+    right: 10px;
+}
+
+.icons span {
+    padding: 10px;
+    margin: 2px;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.search {
+    padding: 0 10px;
+}
+
+.search input {
+    background: var(--background);
+}
+
+.user__chat__section {
+    position: relative;
+    height: calc(100vh - 120px);
+    overflow: auto;
+}
+
+.each__chat {
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    height: 70px;
+    /* background: var(--smoke); */
+}
+
+.each__chat:hover {
+    background: var(--smoke);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details .user__img img {
+    height: 50px;
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.details {
+    display: flex;
+}
+
+.status {
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+    font-weight: 600;
+    padding: 7px;
+    display: flex;
+}
+
+.chat__more__info {
+    padding-left: 10px;
+    color: var(--lightblack);
+    /* display: none; */
+    visibility: hidden;
+}
+
+.each__chat:hover .chat__more__info {
+    /* display: block; */
+    visibility: visible;
+}
+
+.chat__notification {
+    color: var(--red);
+    font-weight: 500;
+}
+
+.user__pp {
+    position: relative;
+    left: 11px;
+    top: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 16px;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.message {
+    font-size: 12px;
+    color: var(--lightblack);
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.suggestions {
+    width: 100%;
+    height: 300px;
+    /* background-color: white; */
+    margin-top: 7px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.user__suggestion {
+    /* background-color: whitesmoke; */
+    height: 65px;
+    width: 96%;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.user__suggestion:hover {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.chat__sug{
+    display: block;
+    margin: 0 auto;
+}

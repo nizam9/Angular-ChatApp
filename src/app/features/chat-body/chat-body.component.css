@@ -1,0 +1,112 @@
+.message__body {
+    /* background-color: antiquewhite; */
+    height: 72vh;
+    width: 100%;
+    overflow: auto;
+}
+
+.message__compose {
+    /* background-color: aqua; */
+    height: calc(100vh - 72vh - 77px)
+}
+
+#sendMessage {
+    height: 50px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 15px;
+    font-size: 15px;
+    margin: 0 auto;
+    display: block;
+    background: whitesmoke;
+}
+
+#sendMessage:focus {
+    border-bottom: 2px solid var(--blue);
+    ;
+    height: 52px;
+}
+
+.message-options .material-icons {
+    padding: 5px 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.send__message {
+    position: relative;
+    float: right;
+    right: 70px;
+}
+
+.message-options {
+    align-self: flex-start;
+    margin-left: 11%;
+}
+
+#sendMessage:focus+.message-options .material-icons {
+    padding: 3px 10px;
+}
+
+.message-container {
+    width: 95%;
+    margin-left: 2%;
+}
+
+.message-sent {
+    background: white;
+    float: right;
+    clear: both;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 50%;
+    background: var(--lightBlue);
+}
+
+.message-received {
+    float: left;
+    clear: both;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 50%;
+    background: whitesmoke;
+}
+
+.sender-details .timestamp {
+    margin-left: 25px;
+    font-size: 11px;
+    position: relative;
+    bottom: 3px;
+}
+
+.message-sent .timestamp {
+    font-size: 11px;
+}
+
+.actual-message {
+    font-size: 14px;
+}
+
+.sender-details .sender-name {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    bottom: 3px;
+    font-size: 14px;
+}
+
+.message-sent {
+    margin-top: 5px;
+}
+
+.message-received {
+    margin-top: 5px;
+}
+
+.message-options svg {
+    color: var(--blue);
+}

@@ -1,0 +1,30 @@
+API : LOGIN
+------------------------------
+method: POST
+url: localhost:8080/api/v1/user/register
+body request:
+{
+    "firstName":"Karishma",
+    "lastName":"Shaik",
+    "email": "karishma@gmail.com",
+    "userName":"karish9",
+    "password":"12345"
+}
+
+Respose: 
+{
+  "code": 200,
+  "result": {
+    "profilePic": "../../../assets/images/profilePic.png",
+    "_id": "60eec4c3f59b3e35d8c41259",
+    "firstName": "Karishma",
+    "lastName": "Shaik",
+    "userName": "karish9",
+    "email": "karishma@gmail.com",
+    "password": "$2b$10$G7w1amdDNY5qCH6wHd2gYObvbxgLOGjDhalt/HiRpw9sg14QOJPLK",
+    "createdAt": "2021-07-14T11:04:35.257Z",
+    "updatedAt": "2021-07-14T11:04:35.257Z",
+    "__v": 0
+  },
+  "message": "User Profile Created Successfully"
+}

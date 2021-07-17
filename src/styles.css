@@ -1,1 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    /* font-size: 15px; */
+}
+
+ :root {
+    --blue: #0d6efd;
+    --lightBlue: #d3e5ff;
+    --white: #ffffff;
+    --border: #86b7fe;
+    --smoke: #ececec;
+    --lightblack: #696a6b;
+    --red: red;
+    --background: #f5f5f5;
+}
+
+ ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: var(--border);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="checkbox"],
+textarea,
+button {
+    box-shadow: none !important;
+}
+
+.required:after {
+    content: " *";
+    color: var(--red);
+}
+
+.alert-error {
+    font-size: 11px;
+    position: relative;
+    left: 10px;
+    color: var(--red);
+}
+
+.p-autocomplete-dd .p-autocomplete-input,
+.p-autocomplete-dd .p-autocomplete-multiple-container,
+.p-autocomplete-dd .p-autocomplete-dropdown {
+    height: 30px !important;
+}
+
+.p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item.p-highlight {
+    background: var(--blue) !important;
+}
+
+.p-autocomplete {
+    margin-left: -8px !important;
+}
+
+.p-button {
+    background: var(--blue) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.p-inputtext:enabled:focus {
+    border-color: var(--border) !important;
+}
+
+.p-card-title {
+    color: var(--blue) !important;
+}
+
+label {
+    font-size: 14px;
+}
+
+.row {
+    --bs-gutter-x: 0rem !important;
+}
+
+.top__section {
+    display: flex;
+    padding: 10px;
+}
+
+.inp-grp {
+    width: 500px !important;
+}
+
+.top__section button {
+    position: relative;
+    left: 45%;
+}
+
+.card-deck {
+    margin: 12px;
+}
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    padding: 0 !important;
+}
+
+.p-badge.p-badge-danger {
+    background-color: #ff6060 !important;
+}

@@ -1,0 +1,29 @@
+.chat__list {
+    height: 100vh;
+    width: 30%;
+    border-right: 1px solid var(--smoke);
+}
+
+.chat__header {
+    /* display: flex; */
+    height: 80px;
+    width: 70%;
+    border-bottom: 1px solid var(--smoke);
+}
+
+.chat__body {
+    height: calc(100vh - 80px);
+    /* width: 100%; */
+    /* position: fixed;
+    top: 80px; */
+}
+
+.chat__info {
+    height: 100vh;
+    width: 30%;
+    border-left: 1px solid var(--smoke);
+}
+
+.container-fluid {
+    display: flex;
+}

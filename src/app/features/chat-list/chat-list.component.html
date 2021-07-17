@@ -1,0 +1,105 @@
+<div class="profile__pic__section">
+    <div class="profile">
+        <img src="../../../assets/profile.png" alt="Profile pic">
+        <span>Chats</span>
+    </div>
+    <div class="icons">
+        <span title="New Chat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                <path fill-rule="evenodd"
+                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+            </svg>
+        </span>
+        <span (click)="display = true" title="Profile Info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+            </svg>
+        </span>
+    </div>
+</div>
+<div class="search">
+    <input type="text" class="form-control" placeholder="Search" (focus)="onSeachFocus()">
+</div>
+
+
+<div class="user__chat__section">
+
+
+    <div class="each__chat" style="font-weight: 500;" *ngFor="let user of userChatList; let i=index;" (click)="onSelectUserOnChatList(user)">
+        <div class="details">
+            <div class="user__img">
+                <img src="../../../assets/profile.png" alt="Profile pic">
+            </div>
+            <div class="user__pp">
+                <span class="username">{{user?.firstName}} {{user?.lastName}}</span>
+                <span class="message"></span>
+            </div>
+        </div>
+        <div class="status">
+            <span class="chat__more__info" (click)="showChatActions()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    <path fill-rule="evenodd"
+                        d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </span>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+<p-sidebar [(visible)]="display" [style]="{width:'25%'}">
+    Content
+</p-sidebar>
+
+<!-- <p-button type="text" (click)="display = true" icon="pi pi-plus" label="Show"></p-button> -->
+
+<p-dialog header="test" [(visible)]="showChatActionsPopup" [closable]="true" [dismissableMask]="true"
+    [closeOnEscape]="true" [modal]="true" [style]="{width: '300px'}" position="center"
+    [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [draggable]=false>
+
+</p-dialog>
+
+<p-dialog header="Search Users" [(visible)]="showSearchPopup" [closable]="true" [dismissableMask]="true"
+    [closeOnEscape]="true" [modal]="true" [style]="{width: '500px'}" position="top" [draggable]=true>
+    <input type="text" class="form-control" placeholder="Search" autofocus="autofocus">
+
+    <div class="suggestions">
+        <div class="user__suggestion" [tabindex]=i *ngFor="let user of usersList; let i=index;">
+            <div class="chat__sug" (click)="onSelectUserFromSearch(user,i)">
+                <div class="details">
+                    <div class="user__img">
+                        <img src="../../../assets/profile.png" alt="Profile pic">
+                    </div>
+                    <div class="user__pp">
+                        <span class="username">{{user?.firstName}} {{user?.lastName}}</span>
+                        <span class="message">{{user.userName}}</span>
+                    </div>
+                </div>
+                <div class="status">
+                    <span class="chat__more__info" (click)="showChatActions()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            <path fill-rule="evenodd"
+                                d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</p-dialog>
